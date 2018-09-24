@@ -12,6 +12,7 @@ def call(site_id, project_id, summary, description, label, issue_type='Task') {
 		labels: [label]]]
 
 	echo "SITE NAME: ${site_id}"
+	println("SITE NAME: ${site_id}")
 	echo "PROJECT ID: ${project_id}"
     //response = jiraNewIssue issue: testIssue, site: ${site_id}
 
