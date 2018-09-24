@@ -11,8 +11,8 @@ def call(site_id, project_id, summary, description, label, issue_type='Task') {
 		issuetype: [name: issue_type],
 		labels: [label]]]
 
-	echo "SITE NAME: "+$site_id
-    response = jiraNewIssue issue: testIssue, site: site_id
+	echo "SITE NAME: " + {$site_id}
+    response = jiraNewIssue issue: testIssue, site: ${site_id}
 
 	echo response.successful.toString()
 	echo response.data.toString()
