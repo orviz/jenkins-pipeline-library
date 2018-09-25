@@ -1,6 +1,6 @@
 #!/usr/bin/groovy
 
-def call(site_id, project_id, summary, description, label, issue_type='Task') {
+def call(site_id, project_id, summary, description, label, issue_type) {
 	def testIssue = [fields: [ 
 		// id or key must present for project.
 		project: [id: "${project_id}"],
