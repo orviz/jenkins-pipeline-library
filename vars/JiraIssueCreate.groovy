@@ -10,8 +10,7 @@ def call(site_id, project_id, summary, description, label, issue_type, assignee)
 		// id or name must present for issueType.
 		issuetype: [name: "${issue_type}"],
 		labels: ["${label}"],
-        //assignee: [name: "${assignee}"]]]
-        assignee: [name: "orviz@ifca.unican.es"]]]
+        assignee: [name: "${assignee}"]]]
     
     response = jiraNewIssue issue: testIssue, site: "${site_id}"
 
