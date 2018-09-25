@@ -12,7 +12,7 @@ def call(site_id, project_id, summary, description, label, issue_type='Task') {
 		issuetype: [name: issue_type],
 		labels: [label]]]
     */
-	println "Testing"
+	println "${site_id}"
     println "${issue_type}"
 	//echo "PROJECT ID: ${project_id}"
     
