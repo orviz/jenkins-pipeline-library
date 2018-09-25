@@ -1,6 +1,7 @@
 #!/usr/bin/groovy
 
 def call(site_id, project_id, summary, description, label, issue_type='Task') {
+    /*
 	def testIssue = [fields: [ 
 		// id or key must present for project.
 		project: [id: project_id],
@@ -10,10 +11,11 @@ def call(site_id, project_id, summary, description, label, issue_type='Task') {
 		// id or name must present for issueType.
 		issuetype: [name: issue_type],
 		labels: [label]]]
-
-	echo "SITE NAME: ${site_id}"
-	println(site_id)
-	echo "PROJECT ID: ${project_id}"
+    */
+	println "Testing"
+    println "${site_id}"
+	//echo "PROJECT ID: ${project_id}"
+    
     //response = jiraNewIssue issue: testIssue, site: ${site_id}
 
 	//echo response.successful.toString()
