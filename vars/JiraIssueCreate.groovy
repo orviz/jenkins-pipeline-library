@@ -13,7 +13,7 @@ def call(site_id, project_id, summary, description, label, issue_type='Task') {
 		labels: [label]]]
     */
 	println "Testing"
-    println "${site_id}"
+    println "${issue_type}"
 	//echo "PROJECT ID: ${project_id}"
     
     //response = jiraNewIssue issue: testIssue, site: ${site_id}
