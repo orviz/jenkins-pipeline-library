@@ -1,12 +1,17 @@
-@Library(['github.com:WORSICA/jenkins-pipeline-library@docker-compose'])
-import eu.indigo.parser.ConfigParser
-import eu.indigo.compose.*
+//@Library(['github.com:WORSICA/jenkins-pipeline-library@docker-compose'])
+//import eu.indigo.parser.ConfigParser
+import eu.indigo.compose.parser.ConfigValidator
+//import eu.indigo.compose.*
 
-call(String yamlName) {
-    def yaml = readYaml file: yamlName
+def call(String yamlName) {
+    dir(env.WORKSPACE) {
+        println "In workspace: ${env.WORKSPACE}"
+        def yaml = readYaml file: yamlName
+        ConfigValidator.validate(yaml)
+    }
 
     def buildNumber = Integer.parseInt(env.BUILD_ID)
-
+    /*
     // load project's configuration
     ProjectConfiguration projectConfig = ConfigParser.parse(yaml, env)
 
@@ -30,4 +35,5 @@ call(String yamlName) {
     } finally{
         deleteDockerImages(projectConfig)
     }
+    */
 }
