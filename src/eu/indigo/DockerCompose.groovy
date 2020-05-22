@@ -4,7 +4,7 @@ package eu.indigo
  * Definitions for Docker Compose integration in Jenkins
  * @see: https://docs.docker.com/compose/compose-file/
  */
-@CompileDynamic
+//@CompileDynamic
 @groovy.transform.InheritConstructors
 class DockerCompose extends JenkinsDefinitions implements Serializable {
 

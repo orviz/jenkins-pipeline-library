@@ -3,7 +3,7 @@ package eu.indigo.compose
 /**
  * Project configuration
  */
-@CompileDynamic
+//@CompileDynamic
 class ProjectConfiguration implements Serializable {
 
     private static final long serialVersionUID = 0L

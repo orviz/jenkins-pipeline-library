@@ -2,21 +2,31 @@ package eu.indigo.compose.parser
 
 import eu.indigo.JenkinsDefinitions
 
-@Grab('com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.10.1')
+@Grab('com.fasterxml.jackson.dataformat:jackson-dataformat-yaml')
 import com.fasterxml.jackson.databind.JsonNode
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory
 
-@Grab('com.networknt:json-schema-validator:1.0.29')
+@Grab('com.networknt:json-schema-validator')
 import com.networknt.schema.JsonSchemaFactory
 import com.networknt.schema.SpecVersion
 import com.networknt.schema.JsonSchema
+
+////@Grab('com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.10.1')
+////import com.fasterxml.jackson.databind.JsonNode
+////import com.fasterxml.jackson.databind.ObjectMapper
+////import com.fasterxml.jackson.dataformat.yaml.YAMLFactory
+////
+////@Grab('com.networknt:json-schema-validator:1.0.29')
+////import com.networknt.schema.JsonSchemaFactory
+////import com.networknt.schema.SpecVersion
+////import com.networknt.schema.JsonSchema
 
 /**
  * Configuration validation for yaml provided file
  * @see: https://docs.docker.com/compose/compose-file/
  */
-@CompileDynamic
+//@CompileDynamic
 @groovy.transform.InheritConstructors
 class ConfigValidation extends JenkinsDefinitions implements Serializable {
 
